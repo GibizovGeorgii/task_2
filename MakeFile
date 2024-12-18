@@ -1,0 +1,13 @@
+CC=g++
+CFLAGS=	-Wall -fopenmp -std=c++17
+SOURCES=main.cpp init.cpp solution.cpp matrix.cpp
+HEADERS=matrix.hpp
+OBJECTS=$(SOURCES:.cpp=.o)
+EXECUTABLE=gogo
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(SOURCES)
+	$(CC) $(CFLAGS) main.cpp matrix.cpp -o $(EXECUTABLE)
+
+
